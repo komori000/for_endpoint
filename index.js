@@ -1,16 +1,10 @@
-const cameraWidth = 300;
-const cameraHeight = 400;
 
 const cameraInit = () => {
     const video = document.getElementById("camera");
 
     const cameraSetting = {
         audio: false,
-        video: {
-            width: cameraWidth,
-            height: cameraHeight,
-            facingMode: "environment",
-        }
+        video: true
     }
 
     navigator.mediaDevices.getUserMedia(cameraSetting)
