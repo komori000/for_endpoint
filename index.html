@@ -1,4 +1,4 @@
-<!-- <html>
+<html>
 
 <head>
   <script src="index.js"></script>
@@ -13,38 +13,5 @@
   </div>
 </body>
 
-</html> -->
-<html>
-
-<head>
-  <!-- ヘッド内にスクリプトを記述 -->
-  <script>
-    const cameraInit = () => {
-      const video = document.getElementById("camera");
-
-      const cameraSetting = {
-        audio: false,
-        video: true
-      };
-
-      navigator.mediaDevices.getUserMedia(cameraSetting)
-        .then((mediaStream) => {
-          video.srcObject = mediaStream;
-        })
-        .catch((err) => {
-          console.log(err.toString());
-        });
-    };
-  </script>
-</head>
-
-<body>
-  <div>
-    <input type="button" value="カメラ起動" onclick="cameraInit()">
-  </div>
-  <div>
-    <video id="camera" style="background-color: #000; width: 100%; height: 100%;" autoplay></video>
-  </div>
-</body>
-
 </html>
+
