@@ -6,7 +6,6 @@ const cameraInit = () => {
         audio: false,
         video: true
     }
-    document.body.requestFullscreen();
     navigator.mediaDevices.getUserMedia(cameraSetting)
         .then((mediaStream) => {
             video.srcObject = mediaStream;
